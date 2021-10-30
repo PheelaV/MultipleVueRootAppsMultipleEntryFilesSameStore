@@ -9,7 +9,7 @@ What confuses me about this is that if I were to instantiate two applications in
 
 I would highly appreciate it if someone could tell me why this can't work, optionally suggest a workaround?
 
-I have created a **reproduction** both in Vue 2 with Vuex and in Vue 3 with composition API/primitiveStoreImplementation [here](https://github.com/PheelaV/MultipleVueRootAppsMultipleEntryFilesSameStore). Vue-cli is building the app in an MPA mode with pages specified in vue.config.json, then imported in the root index.html file. In context of asp/razor I would have webpack set up as to remove the reduntant files, only leaving javascript bunldes. Also dev proxy that would proxy everything except path to the script bundles. All of this is removed for the same of the demonstration.
+I have created a **reproduction** both in Vue 2 with Vuex and in Vue 3 with composition API/primitiveStoreImplementation [here](https://github.com/PheelaV/MultipleVueRootAppsMultipleEntryFilesSameStore). Vue-cli is building the app in an MPA mode with pages specified in vue.config.json, then imported in the root index.html file. The store is initialised once and saved for later check/loading on the ```window``` object. In context of asp/razor I would have webpack set up as to remove the reduntant files, only leaving javascript bunldes. Also dev proxy that would proxy everything except path to the script bundles. All of this is removed for the same of the demonstration.
 
 *(once I find a solution I hope to replace the source link with specific code snippets)*
 
